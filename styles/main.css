@@ -1,0 +1,192 @@
+body {
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(90% + .2vw);
+    line-height: 1.5;
+    border: 2px solid #931420;
+}
+
+header {
+    padding: 1em 0;
+    border-bottom: 2px solid #931420;
+    text-align: center;
+    line-height: 1.2;
+}
+
+header img {
+    min-width: 40px;
+    max-width: 80px;
+    width: 100%;
+    float: left;
+    margin-left: 1em;
+}
+
+header h2 {
+    color: #931420;
+    font-size: 170%;
+}
+
+header h3 {
+    font-size: 130%;
+}
+
+main {
+    display: flex;
+    padding: 1em;
+}
+
+aside {
+    flex-basis: 25%;
+    padding: 1em;
+    order: 1;
+}
+
+section {
+    flex-basis: 75%;
+    padding: 1em;
+    order: 2;
+}
+
+aside img {
+    min-width: 40px;
+    max-width: 75px;
+    width: 100%;
+}
+
+.featured {
+    border-top: 2px solid #931420;
+    border-bottom: 2px solid #931420;
+    padding: 1em 0;
+    margin-top: 1em;
+}
+
+.featured img {
+    min-width: 100px;
+    max-width: 250px;
+    width: 50%;
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+section img {
+    margin-left: 1em;
+}
+
+h1, h2, h3, p, ul {
+    padding-top: .25em;
+    padding-bottom: .25em;
+}
+
+h1 {
+    color: #931420;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+h3 {
+    font-size: 120%;
+}
+
+a {
+    color: #931420;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d14b4b;
+}
+
+footer {
+    border-top: 2px solid #931420;
+    text-align: center;
+    padding: 1em;
+    font-size: 90%;
+}
+
+
+:root {
+    --light-menu-color: #fff;
+    --mid-menu-color: antiquewhite;
+    --dark-menu-color: #333;
+}
+
+.navbar {
+    background-color: #931420;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu > li {
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.navbar a {
+    display: block;
+    padding: 1em;
+    margin: 0 1px 2px;
+    text-decoration: none;
+    color: var(--light-menu-color);
+}
+
+.navbar a:hover,
+.navbar a:focus,
+.navbar a.current {
+    background-color: var(--mid-menu-color);
+    color: var(--dark-menu-color);
+}
+
+.menu li:has(.submenu) {
+    position: relative;
+}
+
+.menu small {
+    margin-left: .5em;
+}
+
+.submenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 10;
+    background-color: #931420;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+}
+
+.menu li:has(.submenu):hover > .submenu,
+.menu li:has(.submenu):focus-within > .submenu {
+    display: block;
+}
+
+.submenu > li a {
+    color: var(--light-menu-color);
+    margin: 0 2px 2px;
+}
+
+.submenu > li a:hover,
+.submenu > li a:focus {
+    background-color: var(--mid-menu-color);
+    color: var(--dark-menu-color);
+}
+
+.menu > li:first-child > a {
+    margin-left: 0;
+}
+
+.menu > li:last-child > a {
+    margin-right: 0;
+}
